@@ -214,7 +214,7 @@ st.download_button(
 # -----------------------------
 st.subheader("グラフ作成")
 chart_type = st.selectbox(
-    "グラフの種類", ["散布図", "棒グラフ", "折れ線グラフ"], index=2
+    "グラフの種類", ["散布図", "棒グラフ", "折れ線グラフ"], index=0
 )
 
 x_col = st.selectbox("X軸に使用する列", filtered.columns)
