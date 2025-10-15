@@ -214,14 +214,14 @@ st.download_button(
 # -----------------------------
 st.subheader("グラフ作成")
 chart_type = st.selectbox(
-    "グラフの種類", ["棒グラフ", "折れ線グラフ", "散布図"], index=2
+    "グラフの種類", ["散布図", "棒グラフ", "折れ線グラフ"], index=2
 )
 
 x_col = st.selectbox("X軸に使用する列", filtered.columns)
 numeric_cols = [
     c for c in filtered.columns if pd.api.types.is_numeric_dtype(filtered[c])
 ]
-if chart_type in ("棒グラフ", "折れ線グラフ", "散布図"):
+if chart_type in ("散布図", "棒グラフ", "折れ線グラフ"):
     if not numeric_cols:
         st.warning(
             "Y軸に使用できる数値列が存在しません。列を数値型に変換してください。"
